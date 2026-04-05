@@ -12,6 +12,8 @@
   let
     system = "x86_64-linux";
   in {
+    diskoConfigurations.default = import ./disko/default.nix;
+
     nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
       inherit system;
 
